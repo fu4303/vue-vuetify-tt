@@ -1,18 +1,6 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
+  <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
+    <Navbar />
     <v-main>
       <router-view />
     </v-main>
@@ -20,11 +8,18 @@
 </template>
 
 <script>
+import Navbar from './components/Navbar';
+
 export default {
   name: 'App',
-
-  components: {},
-
+  components: {
+    Navbar
+  },
+  computed: {
+    theme() {
+      return this.$vuetify.theme.dark ? 'dark' : 'light';
+    }
+  },
   data: () => ({})
 };
 </script>
