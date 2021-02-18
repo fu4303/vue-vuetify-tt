@@ -100,7 +100,13 @@
           personal information.
         </p>
 
-        <Button text="Get started" dark xlarge />
+        <Button
+          text="Get started"
+          dark
+          xlarge
+          @click="handleClick"
+          to="/signup"
+        />
       </div>
       <div class="img-container">
         <v-img
@@ -120,7 +126,13 @@ export default {
   components: {
     Button
   },
-  data: () => ({})
+  methods: {
+    handleClick() {
+      this.$root.$router.push({
+        path: `/rating`
+      });
+    }
+  }
 };
 </script>
 

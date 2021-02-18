@@ -45,8 +45,9 @@
 
     <Button
       text="Get started"
-      styles="d-block mt-6 mb-4 mx-auto btn-dark"
+      styles="mt-6 mb-4 mx-auto btn-dark"
       xlarge
+      to="/signup"
     />
 
     <v-btn
@@ -54,7 +55,7 @@
       plain
       :ripple="false"
       class="d-flex align-center justify-center mx-auto text-capitalize"
-      @click="ratingClick"
+      to="/rating"
     >
       <v-rating
         readonly
@@ -82,14 +83,7 @@ export default {
   },
   data: () => ({
     rating: 4.9
-  }),
-  methods: {
-    ratingClick() {
-      this.$root.$router.push({
-        path: `/rating`
-      });
-    }
-  }
+  })
 };
 </script>
 

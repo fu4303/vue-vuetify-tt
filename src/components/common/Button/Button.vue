@@ -1,5 +1,11 @@
 <template>
-  <v-btn :class="styles" :x-large="xlarge" :dark="dark">
+  <v-btn
+    :class="styles"
+    :x-large="xlarge"
+    :dark="dark"
+    @click="handleClick"
+    :to="to"
+  >
     <span class="btn-text">
       {{ text }}
     </span>
@@ -24,6 +30,15 @@ export default {
     dark: {
       type: Boolean,
       default: false
+    },
+    to: {
+      type: String,
+      default: null
+    }
+  },
+  methods: {
+    handleClick() {
+      this.$emit('click');
     }
   }
 };

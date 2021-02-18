@@ -18,7 +18,7 @@
     <FAQ />
 
     <div class="text-center my-9">
-      <Button text="Get started" styles="btn-dark" xlarge />
+      <Button text="Get started" styles="btn-dark" xlarge to="/signup" />
     </div>
   </div>
 </template>
