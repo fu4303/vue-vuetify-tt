@@ -25,8 +25,17 @@ export default {
 </script>
 
 <style>
+.f-22 {
+  font-size: 22px;
+}
+
+.fw-9 {
+  font-weight: 900;
+}
+
 :root {
   --v-anchor-base: #1b1d27;
+  --v-theme-primary-base: #a4c0e8;
   --v-primary-base: #1b1d27;
   --v-primary-lighten5: #9193a0;
   --v-primary-lighten4: #777985;
@@ -37,7 +46,7 @@ export default {
   --v-primary-darken2: #000000;
   --v-primary-darken3: #000000;
   --v-primary-darken4: #000000;
-  --v-secondary-base: #424242;
+  --v-secondary-base: #709ee0;
   --v-secondary-lighten5: #c1c1c1;
   --v-secondary-lighten4: #a6a6a6;
   --v-secondary-lighten3: #8b8b8b;

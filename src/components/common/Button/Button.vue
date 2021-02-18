@@ -1,5 +1,5 @@
 <template>
-  <v-btn :class="styles">
+  <v-btn :class="styles" :x-large="xlarge" :dark="dark">
     <span class="btn-text">
       {{ text }}
     </span>
@@ -16,6 +16,14 @@ export default {
     text: {
       type: String,
       default: 'null'
+    },
+    xlarge: {
+      type: Boolean,
+      default: false
+    },
+    dark: {
+      type: Boolean,
+      default: false
     }
   }
 };

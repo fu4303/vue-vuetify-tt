@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <h2 class="text-center my-5">Frequently Asked Questions</h2>
+  <div class="faq">
+    <h1 class="text-center mb-6">Frequently Asked Questions</h1>
     <v-row no-gutters>
-      <v-col cols="12" md="10" offset-md="1">
+      <v-col cols="12" md="8" offset-md="2" lg="6" offset-lg="3">
         <v-expansion-panels accordion>
           <v-expansion-panel
             v-for="(item, i) in items"

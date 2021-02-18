@@ -1,28 +1,26 @@
 <template>
-  <div>
-    <v-autocomplete
-      :items="entries"
-      :search-input.sync="search"
-      color="grey"
-      item-text="name"
-      item-value="name"
-      hide-no-data
-      hide-selected
-      placeholder="Search"
-      return-object
-      append-icon="mdi-magnify"
-      @click:append="searchAction"
-      solo
-      clearable
-      :class="styles ? 'searchbar search-on' : 'searchbar search-off'"
-    >
-      <template v-slot:item="{ item }">
-        <v-list-item link :to="'/search?q=' + item.slug">{{
-          item.name
-        }}</v-list-item>
-      </template></v-autocomplete
-    >
-  </div>
+  <v-autocomplete
+    :items="entries"
+    :search-input.sync="search"
+    color="grey"
+    item-text="name"
+    item-value="name"
+    hide-no-data
+    hide-selected
+    placeholder="Search"
+    return-object
+    append-icon="mdi-magnify"
+    @click:append="searchAction"
+    solo
+    clearable
+    :class="styles ? 'searchbar search-on' : 'searchbar search-off'"
+  >
+    <template v-slot:item="{ item }">
+      <v-list-item link :to="'/search?q=' + item.slug">{{
+        item.name
+      }}</v-list-item>
+    </template></v-autocomplete
+  >
 </template>
 
 <script>
@@ -91,15 +89,13 @@ export default {
 };
 </script>
 
-<style scoped>
-.searchbar .notranslate {
+<style>
+.searchbar {
+  max-width: 700px !important;
+  margin: 0 auto !important;
 }
 
-.mdi-magnify.notranslate {
+.searchbar .notranslate {
   transform: none !important;
 }
-
-.search-on {
-  /* background-color: green; */
-}</style
->>
+</style>

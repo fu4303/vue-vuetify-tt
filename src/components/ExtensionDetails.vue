@@ -1,78 +1,75 @@
 <template>
-  <v-row no-gutters>
-    <v-col
-      cols="12"
-      md="8"
-      offset-md="2"
-      class="d-flex flex-column align-center"
+  <div class="d-flex flex-column align-center justify-center px-4">
+    <div class="text-center mb-3">
+      <h1 class="mb-2">
+        Tired of being tracked online? We can help.
+      </h1>
+      <p class="mb-0">
+        Get seamless privacy protection on your browser for free with one
+        download:
+      </p>
+    </div>
+    <ul
+      class="d-flex justify-center align-sm-center flex-column flex-sm-row privacy-checklist"
     >
-      <div class="text-center mb-3">
-        <h2 class="font-weight-large mb-2">
-          Tired of being tracked online? We can help.
-        </h2>
-        <p>
-          Get seamless privacy protection on your browser for free with one
-          download:
-        </p>
-      </div>
-      <ul
-        class="d-flex justify-center align-sm-center flex-column flex-sm-row privacy-checklist"
+      <li
+        class="d-block d-sm-flex justify-center align-sm-center mr-sm-4 mb-3 mb-sm-0"
       >
-        <li
-          class="d-block d-sm-flex justify-center align-sm-center mr-sm-4 mb-3 mb-sm-0"
-        >
-          <v-icon color="secondary" small class="mr-sm-2">
-            mdi-checkbox-marked-circle
-          </v-icon>
-          <span>
-            Private Search
-          </span>
-        </li>
-        <li
-          class="d-block d-sm-flex justify-center align-sm-center mr-sm-4 mb-3 mb-sm-0"
-        >
-          <v-icon color="secondary" small class="mr-sm-2">
-            mdi-checkbox-marked-circle
-          </v-icon>
-          <span>
-            Tracker Blocking
-          </span>
-        </li>
-
-        <li class="d-block d-sm-flex justify-center align-sm-center">
-          <v-icon color="secondary" small class="mr-sm-2">
-            mdi-checkbox-marked-circle
-          </v-icon>
-          <span>
-            Site Encryption
-          </span>
-        </li>
-      </ul>
-
-      <Button text="Get started" class="d-block mt-6 mb-4 mx-auto btn-dark" />
-
-      <v-btn
-        text
-        plain
-        :ripple="false"
-        class="d-flex align-center justify-center mx-auto"
-        @click="ratingClick"
+        <v-icon color="secondary" small class="mr-sm-2">
+          mdi-checkbox-marked-circle
+        </v-icon>
+        <span class="font-weight-medium">
+          Private Search
+        </span>
+      </li>
+      <li
+        class="d-block d-sm-flex justify-center align-sm-center mr-sm-4 mb-3 mb-sm-0"
       >
-        <v-rating
-          readonly
-          v-model="rating"
-          half-increments
-          background-color="grey"
-          color="black"
-          small
-          dense
-          class="mr-3"
-        ></v-rating>
+        <v-icon color="secondary" small class="mr-sm-2">
+          mdi-checkbox-marked-circle
+        </v-icon>
+        <span class="font-weight-medium">
+          Tracker Blocking
+        </span>
+      </li>
 
-        <span>Rated {{ rating }}/5</span>
-      </v-btn>
-    </v-col>
-  </v-row>
+      <li class="d-block d-sm-flex justify-center align-sm-center">
+        <v-icon color="secondary" small class="mr-sm-2">
+          mdi-checkbox-marked-circle
+        </v-icon>
+        <span class="font-weight-medium">
+          Site Encryption
+        </span>
+      </li>
+    </ul>
+
+    <Button
+      text="Get started"
+      styles="d-block mt-6 mb-4 mx-auto btn-dark"
+      xlarge
+    />
+
+    <v-btn
+      text
+      plain
+      :ripple="false"
+      class="d-flex align-center justify-center mx-auto text-capitalize"
+      @click="ratingClick"
+    >
+      <v-rating
+        readonly
+        v-model="rating"
+        half-increments
+        background-color="grey"
+        color="primary"
+        small
+        dense
+        class="mr-3"
+      ></v-rating>
+
+      <span>Rated {{ rating }}/5</span>
+    </v-btn>
+  </div>
 </template>
 
 <script>

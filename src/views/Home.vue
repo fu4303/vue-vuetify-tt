@@ -1,17 +1,26 @@
 <template>
-  <v-container>
-    <div class="mt-3 mb-6">
+  <div>
+    <div class="mt-3 mb-9">
       <Logo />
     </div>
-    <Search />
-    <ExtensionDetails />
-    <Privacy />
+    <div class="mb-2 px-4">
+      <Search />
+    </div>
+
+    <div class="mb-12">
+      <ExtensionDetails />
+    </div>
+
+    <div class="mb-16">
+      <Privacy />
+    </div>
+
     <FAQ />
 
-    <div class="text-center my-6">
-      <Button text="Get started" class="btn-dark" />
+    <div class="text-center my-9">
+      <Button text="Get started" styles="btn-dark" xlarge />
     </div>
-  </v-container>
+  </div>
 </template>
 
 <script>
