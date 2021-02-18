@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header">
     <div class="d-flex justify-end container">
       <v-menu offset-y>
         <template v-slot:activator="{ on, attrs }">
@@ -33,7 +33,7 @@
       </v-menu>
 
       <v-app-bar-nav-icon
-        @click="drawer = true"
+        @click="toggleDrawer(true)"
         class="ml-3"
       ></v-app-bar-nav-icon>
     </div>
@@ -43,7 +43,7 @@
       temporary
       right
       class="mx-auto"
-      height="100vh"
+      :height="drawerHeight"
     >
       <div class="d-flex justify-end">
         <v-btn
@@ -52,7 +52,7 @@
           plain
           small
           fab
-          @click="drawer = false"
+          @click="toggleDrawer(false)"
         >
           <v-icon>mdi-close</v-icon>
         </v-btn>
@@ -127,6 +127,7 @@
 export default {
   name: 'Navbar',
   data: () => ({
+    drawerHeight: 0,
     drawer: false,
     group: null,
     dropdownItems: [
@@ -173,6 +174,28 @@ export default {
       { title: 'Reddit', to: '/reddit' },
       { title: 'Help', to: '/help' }
     ]
-  })
+  }),
+  watch: {
+    drawer: {
+      handler: function(drawer) {
+        if (drawer) {
+          this.drawerHeight = '100vh';
+        } else {
+          this.drawerHeight = 0;
+        }
+      }
+    }
+  },
+  methods: {
+    toggleDrawer(value) {
+      this.drawer = value;
+
+      if (value) {
+        this.drawerHeight = '100vh';
+      } else {
+        this.drawerHeight = 0;
+      }
+    }
+  }
 };
 </script>
