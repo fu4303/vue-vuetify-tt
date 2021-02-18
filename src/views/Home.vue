@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <DefaultLayout>
     <div class="mt-3 mb-9">
       <Logo />
     </div>
@@ -20,10 +20,11 @@
     <div class="text-center my-9">
       <Button text="Get started" styles="btn-dark" xlarge to="/signup" />
     </div>
-  </div>
+  </DefaultLayout>
 </template>
 
 <script>
+import DefaultLayout from '../components/Layouts/DefaultLayout';
 import Logo from '../components/Logo';
 import Search from '../components/Search';
 import ExtensionDetails from '../components/ExtensionDetails';
@@ -34,6 +35,7 @@ import Button from '../components/common/Button';
 export default {
   name: 'Home',
   components: {
+    DefaultLayout,
     Logo,
     Search,
     ExtensionDetails,

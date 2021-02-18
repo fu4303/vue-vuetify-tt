@@ -1,20 +1,12 @@
 <template>
   <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
-    <Navbar />
-    <v-main>
-      <router-view />
-    </v-main>
+    <router-view />
   </v-app>
 </template>
 
 <script>
-import Navbar from './components/Navbar';
-
 export default {
   name: 'App',
-  components: {
-    Navbar
-  },
   computed: {
     theme() {
       return this.$vuetify.theme.dark ? 'dark' : 'light';
@@ -25,8 +17,38 @@ export default {
 </script>
 
 <style>
+.h-100 {
+  height: 100%;
+}
+
+.f-16 {
+  font-size: 16px;
+}
+
+.f-19 {
+  font-size: 19px;
+}
+
 .f-22 {
   font-size: 22px;
+}
+
+.f-24 {
+  font-size: 24px;
+}
+
+@media (min-width: 960px) {
+  .f-md-24 {
+    font-size: 24px;
+  }
+}
+
+.f-27 {
+  font-size: 27px;
+}
+
+.f-40 {
+  font-size: 40px;
 }
 
 .fw-9 {

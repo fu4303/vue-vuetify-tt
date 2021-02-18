@@ -45,6 +45,10 @@ export default {
 </script>
 
 <style>
+.v-btn {
+  text-transform: none;
+}
+
 .btn-dark {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
