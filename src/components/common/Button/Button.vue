@@ -5,6 +5,7 @@
     :dark="dark"
     @click="handleClick"
     :to="to"
+    :disabled="disabled"
   >
     <span class="btn-text">
       {{ text }}
@@ -34,6 +35,10 @@ export default {
     to: {
       type: String,
       default: null
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -49,7 +54,16 @@ export default {
   text-transform: none;
 }
 
-.btn-dark {
+.v-btn.v-size--x-large {
+  padding: 19px 30px !important;
+}
+
+.v-btn .btn-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn-dark:not(.v-btn--disabled) {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border-radius: 5px !important;

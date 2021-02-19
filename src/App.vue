@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style>
+.w-100 {
+  width: 100%;
+}
+
 .h-100 {
   height: 100%;
 }
@@ -41,10 +45,26 @@ export default {
   .f-md-24 {
     font-size: 24px;
   }
+
+  .f-md-30 {
+    font-size: 30px;
+  }
+
+  .f-md-34 {
+    font-size: 34px;
+  }
+
+  .f-md-40 {
+    font-size: 40px;
+  }
 }
 
 .f-27 {
   font-size: 27px;
+}
+
+.f-30 {
+  font-size: 30px;
 }
 
 .f-40 {

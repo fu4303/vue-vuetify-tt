@@ -12,7 +12,7 @@ export default new Vuetify({
         secondary: '#709ee0',
         surface: '#f9f9f9',
         accent: colors.shades.black,
-        error: colors.red.accent3,
+        error: '#ff5252',
         background: '#f7f7f7'
       },
       dark: {
@@ -20,7 +20,7 @@ export default new Vuetify({
         secondary: colors.grey.darken1,
         surface: '#f9f9f9',
         accent: colors.shades.black,
-        error: colors.red.accent3,
+        error: '#ff5252',
         background: colors.grey.darken1
       }
     }
