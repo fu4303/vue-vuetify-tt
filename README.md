@@ -1,12 +1,12 @@
 # Vue Vuetify
 
-# Description
+## Description
 
 <dl>
     <dd>
         This project is a template for a landing page and CTA to the sign up page flow.
     </dd>
-</dl>
+</dl><br />
 
 <dl>
 <dt>Quick scaffolding</dt>
