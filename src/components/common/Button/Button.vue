@@ -58,7 +58,7 @@ export default {
   padding: 19px 30px !important;
 }
 
-.v-btn .btn-text {
+.v-btn.v-size--x-large .btn-text {
   font-size: 20px;
   font-weight: 700;
 }
