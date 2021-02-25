@@ -8,18 +8,6 @@
     "parser": "babel-eslint"
   },
   "rules": {
-    "prettier/prettier": [
-      "warn",
-      {
-        "printWidth": 80,
-        "tabWidth": 2,
-        "useTabs": false,
-        "semi": true,
-        "singleQuote": true,
-        "arrowParens": "avoid",
-        "trailingComma": "none"
-      }
-    ]
-    // "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"]
   }
 }

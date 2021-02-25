@@ -1,11 +1,8 @@
 <template>
   <DefaultLayout>
     <div class="d-flex flex-column align-center justify-center not-found">
-      <h4 class="f-30">
-        404
-      </h4>
+      <h4 class="f-30">404</h4>
       <p class="text">Page NotFound</p>
-
       <Button text="Back to Homepage" dark xlarge to="/" />
     </div>
   </DefaultLayout>
